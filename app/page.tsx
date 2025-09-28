@@ -7,6 +7,7 @@ import { NewReleasePromo } from "@/components/new-release-promo"
 import { FAQSection } from "@/components/faq-section"
 import { PricingSection } from "@/components/pricing-section"
 import { StickyFooter } from "@/components/sticky-footer"
+import { IntegrationsSection } from "@/components/integrations-section"
 
 export default function Home() {
   useEffect(() => {
@@ -36,6 +37,11 @@ export default function Home() {
       </div>
 
       <NewReleasePromo />
+
+      {/* Integrations Section */}
+      <div id="integrations">
+        <IntegrationsSection />
+      </div>
 
       {/* FAQ Section */}
       <div id="faq">

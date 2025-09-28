@@ -187,31 +187,7 @@ export default function Hero() {
           </div>
 
           {/* Stats Section */}
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.5 }}
-            className="mt-auto pb-8"
-          >
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
-              <div className="text-center">
-                <div className="text-3xl font-bold text-blue-400 mb-1">99.9%</div>
-                <div className="text-sm text-muted-foreground">Uptime</div>
-              </div>
-              <div className="text-center">
-                <div className="text-3xl font-bold text-blue-400 mb-1">50ms</div>
-                <div className="text-sm text-muted-foreground">Latency</div>
-              </div>
-              <div className="text-center">
-                <div className="text-3xl font-bold text-blue-400 mb-1">18+</div>
-                <div className="text-sm text-muted-foreground">Languages</div>
-              </div>
-              <div className="text-center">
-                <div className="text-3xl font-bold text-blue-400 mb-1">10K+</div>
-                <div className="text-sm text-muted-foreground">Calls/Day</div>
-              </div>
-            </div>
-          </motion.div>
+         
         </div>
       </section>
     </>

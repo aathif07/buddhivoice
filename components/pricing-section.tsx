@@ -12,35 +12,35 @@ import {
 } from "lucide-react";
 import MagicBento from "./MagicBento";
 
-// Data for the "How It Works" section - with public image links
+// Data for the "How It Works" section - with video display functionality
 const howItWorksSteps = [
   {
     icon: Zap,
     title: "Build",
     description: "Utilize the voice AI API and our intuitive agent builder to create custom voice AI callers effortlessly.",
-    image: "https://images.unsplash.com/photo-1551434678-e076c223a692?w=800&h=600&fit=crop&crop=entropy&auto=format&q=80",
-    alt: "Agent Builder Screenshot",
+    video: "/01.mp4", // Set to video URL when video is available
+    alt: "Agent Builder Demo Video",
   },
   {
     icon: MonitorUp,
     title: "Test",
     description: "Perform comprehensive agent testing with built-in LLM features to ensure seamless handling of edge cases.",
-    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=600&fit=crop&crop=entropy&auto=format&q=80",
-    alt: "Testing Interface Screenshot",
+    video: "/02.mp4", // Set to video URL when video is available
+    alt: "Testing Interface Demo Video",
   },
   {
     icon: Send,
     title: "Deploy",
     description: "Easily deploy your agents for AI phone calls, web calls, SMS, chat, and more.",
-    image: "https://images.unsplash.com/photo-1559526324-4b87b5e36e44?w=800&h=600&fit=crop&crop=entropy&auto=format&q=80",
-    alt: "Deployment Options Screenshot",
+    video: "/03.mp4", // Set to video URL when video is available
+    alt: "Deployment Options Demo Video",
   },
   {
     icon: LineChart,
     title: "Monitor",
     description: "Artificial Intelligence tracks success rates, latency, and user sentiment through call history dashboard. Quickly identify failed calls.",
-    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=600&fit=crop&crop=entropy&auto=format&q=80",
-    alt: "Monitoring Dashboard Screenshot",
+    video: "/04.mp4", // Set to video URL when video is available
+    alt: "Monitoring Dashboard Demo Video",
   },
 ];
 
@@ -142,22 +142,69 @@ export function PricingSection() {
             </p>
           </motion.div>
 
-          {/* Magic Bento Cards */}
-          <div className="flex justify-center px-2 md:px-4 lg:px-8">
-            <div className="w-full max-w-6xl">
-              <MagicBento 
-                textAutoHide={true}
-                enableStars={!isMobile}
-                enableSpotlight={!isMobile}
-                enableBorderGlow={true}
-                enableTilt={false}
-                enableMagnetism={false}
-                clickEffect={!isMobile}
-                spotlightRadius={isMobile ? 150 : 280}
-                particleCount={isMobile ? 6 : 12}
-                glowColor="59, 130, 246"
-              />
-            </div>
+          {/* How It Works Steps with Video Display */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 max-w-6xl mx-auto">
+            {howItWorksSteps.map((step, index) => {
+              const IconComponent = step.icon;
+              const videoUrl = step.video; // Use static video from step data
+              
+              return (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true, amount: 0.3 }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  className="group relative"
+                >
+                  {/* Step Card */}
+                  <div className="relative bg-white/5 backdrop-blur-sm rounded-2xl p-6 md:p-8 border border-white/10 hover:border-white/20 transition-all duration-300 h-full flex flex-col">
+                    {/* Step Number */}
+                    <div className="absolute -top-4 -left-4 w-8 h-8 bg-gradient-to-r from-[#3B82F6] to-[#3B82F6]/80 rounded-full flex items-center justify-center text-white font-bold text-sm">
+                      {index + 1}
+                    </div>
+
+                    {/* Title */}
+                    <div className="mb-4">
+                      <h3 className="text-2xl md:text-3xl lg:text-4xl font-bold text-white">{step.title}</h3>
+                    </div>
+
+                    {/* Description */}
+                    <p className="text-white/70 text-sm md:text-base mb-6 leading-relaxed flex-grow">
+                      {step.description}
+                    </p>
+
+                    {/* Video Section */}
+                    <div className="relative mt-auto">
+                      {videoUrl ? (
+                        <div className="relative group/video">
+                          <video
+                            className="w-full h-auto rounded-xl border border-white/10"
+                            autoPlay
+                            loop
+                            muted
+                            playsInline
+                            preload="auto"
+                          >
+                            <source src={videoUrl} type="video/mp4" />
+                            Your browser does not support the video tag.
+                          </video>
+                        </div>
+                      ) : (
+                        <div className="w-full aspect-video bg-white/5 border-2 border-dashed border-white/20 rounded-xl flex flex-col items-center justify-center text-center p-6">
+                          <div className="p-4 bg-white/5 rounded-full mb-4">
+                            <svg className="w-8 h-8 text-white/40" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" />
+                            </svg>
+                          </div>
+                          <p className="text-white/40 text-sm">Demo video coming soon</p>
+                        </div>
+                      )}
+                    </div>
+                  </div>
+                </motion.div>
+              );
+            })}
           </div>
         </div>
       </section>

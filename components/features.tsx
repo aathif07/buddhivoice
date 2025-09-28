@@ -169,7 +169,7 @@ export default function Features() {
         ref={ref}
         initial={{ opacity: 0, y: 50 }}
         animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
-        transition={{ duration: 0.5, delay: 0 }}
+        transition={{ duration: 0.3, delay: 0 }}
         className="container mx-auto flex flex-col items-center gap-4 sm:gap-8 md:gap-12 px-4 md:px-6 lg:px-8"
       >
         <h2
@@ -198,7 +198,7 @@ export default function Features() {
                 ref={ref}
                 initial={{ opacity: 0, y: 50 }}
                 animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
-                transition={{ duration: 0.5, delay: 0.5 }}
+                transition={{ duration: 0.3, delay: 0.1 }}
                 whileHover={{
                   scale: isDesktop ? 1.02 : 1,
                   borderColor: "rgba(79, 70, 229, 0.6)",
@@ -332,7 +332,7 @@ export default function Features() {
                 ref={ref}
                 initial={{ opacity: 0, y: 50 }}
                 animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
-                transition={{ duration: 0.5, delay: 0.6 }}
+                transition={{ duration: 0.3, delay: 0.15 }}
                 whileHover={{
                   scale: isDesktop ? 1.02 : 1,
                   borderColor: "rgba(79, 70, 229, 0.6)",
@@ -398,7 +398,7 @@ export default function Features() {
                 className="group border-secondary/40 text-card-foreground relative flex flex-col overflow-hidden rounded-xl border-2 p-6 shadow-xl transition-all ease-in-out h-[500px] md:h-[550px] lg:h-[600px]"
                 initial={{ opacity: 0, y: 50 }}
                 animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
-                transition={{ duration: 0.5, delay: 0.7 }}
+                transition={{ duration: 0.3, delay: 0.2 }}
                 whileHover={{
                   scale: isDesktop ? 1.02 : 1,
                   borderColor: "rgba(79, 70, 229, 0.5)",
@@ -439,7 +439,7 @@ export default function Features() {
                 onMouseLeave={() => setIsFeature4Hovering(false)}
                 initial={{ opacity: 0, y: 50 }}
                 animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
-                transition={{ duration: 0.5, delay: 0.8 }}
+                transition={{ duration: 0.3, delay: 0.25 }}
                 whileHover={{
                   scale: isDesktop ? 1.02 : 1,
                   borderColor: "rgba(79, 70, 229, 0.6)",
@@ -497,7 +497,7 @@ export default function Features() {
                 className="group border-secondary/40 text-card-foreground relative col-span-1 md:col-span-2 flex flex-col overflow-hidden rounded-xl border-2 p-6 shadow-xl transition-all ease-in-out min-h-[600px] md:min-h-[650px] lg:min-h-[700px]"
                 initial={{ opacity: 0, y: 50 }}
                 animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
-                transition={{ duration: 0.5, delay: 0.9 }}
+                transition={{ duration: 0.3, delay: 0.3 }}
                 whileHover={{
                   scale: isDesktop ? 1.01 : 1,
                   borderColor: "rgba(79, 70, 229, 0.6)",

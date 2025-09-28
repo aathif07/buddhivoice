@@ -225,6 +225,81 @@ body {
   animation: marquee-vertical var(--duration) linear infinite;
 }
 
+/* Vertical scrolling animation for integration icons */
+@keyframes vertical-scroll {
+  0% {
+    transform: translateY(-100px);
+  }
+  50% {
+    transform: translateY(-300px);
+  }
+  100% {
+    transform: translateY(-100px);
+  }
+}
+
+.animate-vertical-scroll {
+  animation: vertical-scroll 8s linear infinite;
+}
+
+/* Horizontal scrolling animation for integration icons */
+@keyframes horizontal-scroll {
+  0% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.animate-horizontal-scroll {
+  animation: horizontal-scroll 20s linear infinite;
+}
+
 .animate-shiny-text {
   animation: shiny-text 3s ease-in-out infinite;
+}
+
+/* Integration logos animations with staggered timing */
+@keyframes float {
+  0%, 100% { 
+    transform: translateY(0px) rotate(0deg); 
+  }
+  50% { 
+    transform: translateY(-10px) rotate(1deg); 
+  }
+}
+
+@keyframes scale {
+  0%, 100% { 
+    transform: scale(1); 
+  }
+  50% { 
+    transform: scale(1.05); 
+  }
+}
+
+@keyframes rotate {
+  0% { 
+    transform: rotate(0deg); 
+  }
+  100% { 
+    transform: rotate(360deg); 
+  }
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+.animate-scale {
+  animation: scale 4s ease-in-out infinite;
+}
+
+.animate-rotate {
+  animation: rotate 8s linear infinite;
+}
+
+.hover\:pause:hover {
+  animation-play-state: paused;
 }
