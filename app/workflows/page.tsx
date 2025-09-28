@@ -51,7 +51,7 @@ export default function WorkflowsPage() {
   ]
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen pb-64">
       {/* Hero Section */}
       <section className="relative overflow-hidden py-24 sm:py-32">
         <div className="container mx-auto px-4 relative z-10">
@@ -239,7 +239,7 @@ export default function WorkflowsPage() {
             className="mx-auto max-w-4xl text-center"
           >
             <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl mb-6">
-              Ready to Transform Your Call Operations?
+              Ready to Transform Your <span className="text-blue-400">Call Operations</span>?
             </h2>
             <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
               Join thousands of businesses who have automated their phone communications with Buddhi Voice.

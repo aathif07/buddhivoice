@@ -63,7 +63,7 @@ export default function FeaturesPage() {
   ]
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen pb-64">
       {/* Hero Section */}
       <section className="relative overflow-hidden py-24 sm:py-32">
         <div className="container mx-auto px-4 relative z-10">
@@ -89,8 +89,8 @@ export default function FeaturesPage() {
               transition={{ duration: 0.5, delay: 0.1 }}
               className="text-4xl font-bold tracking-tight text-foreground sm:text-6xl lg:text-7xl mb-8 text-balance"
             >
-              Supercharge your Call Operations <br />
-              <span className="text-blue-400">with Voice AI</span>
+              Powerful Voice AI Features <br />
+              <span className="text-blue-400">for Modern Businesses</span>
             </motion.h1>
 
             <motion.p
@@ -99,7 +99,7 @@ export default function FeaturesPage() {
               transition={{ duration: 0.5, delay: 0.2 }}
               className="mx-auto mb-12 max-w-2xl text-lg text-muted-foreground text-pretty"
             >
-              Discover the new way to build, test, deploy, and monitor production-ready AI voice agents at scale.
+              Explore the comprehensive features that make BuddhiVoice the leading platform for building, deploying, and managing intelligent voice agents.
             </motion.p>
           </div>
         </div>
@@ -151,10 +151,10 @@ export default function FeaturesPage() {
             className="mx-auto max-w-4xl text-center"
           >
             <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl mb-6">
-              Ready to Transform Your Workflow?
+              Ready to Get Started?
             </h2>
             <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
-              Join thousands of professionals who have automated their repetitive tasks with BuddhiSys.
+              Experience the power of BuddhiVoice features with our comprehensive platform designed for modern voice AI solutions.
             </p>
 
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
