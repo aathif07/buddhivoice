@@ -85,13 +85,13 @@ export function StickyFooter() {
             </motion.div>
             
             <motion.h2
-              className="absolute bottom-0 left-0 translate-y-1/3 sm:text-[192px] text-[80px] font-bold select-none opacity-10"
+              className="absolute bottom-0 left-0 translate-y-1/3 sm:text-[185px] text-[80px] font-bold select-none opacity-10 whitespace-nowrap"
               style={{ color: "#FFFFFF" }}
               initial={{ opacity: 0, x: -100 }}
               animate={{ opacity: 0.1, x: 0 }}
               transition={{ duration: 0.8, delay: 0.3 }}
             >
-              BUDDHI VOICE 
+              BUDDHIAI  VOICE 
             </motion.h2>
           </div>
         </motion.div>

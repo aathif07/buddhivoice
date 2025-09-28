@@ -20,6 +20,13 @@ export default function Hero() {
   return (
     <>
       <section className="relative overflow-hidden min-h-screen flex flex-col">
+        {/* Wave Effect Background */}
+        <div className="absolute inset-0 pointer-events-none overflow-hidden">
+          <div className="absolute top-0 left-0 right-0 h-64 opacity-30">
+           
+          </div>
+        </div>
+        
         <div className="container mx-auto px-4 py-24 sm:py-32 relative z-10 flex-1 flex flex-col">
           <div className="mx-auto max-w-4xl text-center flex-1 flex flex-col justify-center">
             {/* Badge */}
@@ -31,7 +38,7 @@ export default function Hero() {
             >
               <Badge
                 variant="secondary"
-                className="inline-flex items-center gap-2 px-4 py-2 text-sm bg-blue-500/10 text-blue-400 border-blue-500/20"
+                className="inline-flex items-center gap-2 px-4 py-2 text-sm bg-blue-500/10 text-blue-400 border-blue-500/20 relative z-20"
               >
                 <Sparkles className="h-4 w-4" />
                 Voice AI Platform
@@ -133,12 +140,17 @@ export default function Hero() {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.4 }}
-              className="mb-16"
+              className="mb-16 relative"
             >
-              <div className="relative mx-auto max-w-4xl">
+              {/* Background Wave Effect for Content */}
+              <div className="absolute inset-0 -inset-x-32 -inset-y-16 pointer-events-none overflow-hidden opacity-20">
+               
+              </div>
+              
+              <div className="relative mx-auto max-w-4xl z-10">
                 <div className="grid grid-cols-1 md:grid-cols-5 gap-6 items-center">
                   {/* Customer Icon */}
-                  <div className="flex flex-col items-center space-y-3 p-6 rounded-2xl bg-gradient-to-br from-green-500/10 to-green-600/10 border border-green-500/20">
+                  <div className="flex flex-col items-center space-y-3 p-6 rounded-2xl bg-gradient-to-br from-green-500/10 to-green-600/10 border border-green-500/20 backdrop-blur-sm">
                     <div className="w-12 h-12 bg-gradient-to-br from-green-500 to-green-600 rounded-xl flex items-center justify-center">
                       <Phone className="w-6 h-6 text-white" />
                     </div>
@@ -147,7 +159,7 @@ export default function Hero() {
 
                   {/* Arrow */}
                   <div className="flex justify-center">
-                    <div className="w-8 h-8 rounded-full bg-blue-500/20 flex items-center justify-center">
+                    <div className="w-8 h-8 rounded-full bg-blue-500/20 flex items-center justify-center backdrop-blur-sm">
                       <svg className="w-4 h-4 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                       </svg>
@@ -155,7 +167,7 @@ export default function Hero() {
                   </div>
 
                   {/* BuddhiVoice AI */}
-                  <div className="flex flex-col items-center space-y-3 p-6 rounded-2xl bg-gradient-to-br from-blue-500/10 to-blue-600/10 border border-blue-500/20">
+                  <div className="flex flex-col items-center space-y-3 p-6 rounded-2xl bg-gradient-to-br from-blue-500/10 to-blue-600/10 border border-blue-500/20 backdrop-blur-sm">
                     <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-600 rounded-2xl flex items-center justify-center shadow-lg shadow-blue-500/25">
                       <span className="text-white font-bold text-xl">BV</span>
                     </div>
@@ -164,7 +176,7 @@ export default function Hero() {
 
                   {/* Arrow */}
                   <div className="flex justify-center">
-                    <div className="w-8 h-8 rounded-full bg-purple-500/20 flex items-center justify-center">
+                    <div className="w-8 h-8 rounded-full bg-purple-500/20 flex items-center justify-center backdrop-blur-sm">
                       <svg className="w-4 h-4 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                       </svg>
@@ -172,7 +184,7 @@ export default function Hero() {
                   </div>
 
                   {/* Business Systems */}
-                  <div className="flex flex-col items-center space-y-3 p-6 rounded-2xl bg-gradient-to-br from-purple-500/10 to-purple-600/10 border border-purple-500/20">
+                  <div className="flex flex-col items-center space-y-3 p-6 rounded-2xl bg-gradient-to-br from-purple-500/10 to-purple-600/10 border border-purple-500/20 backdrop-blur-sm">
                     <div className="w-12 h-12 bg-gradient-to-br from-purple-500 to-purple-600 rounded-xl flex items-center justify-center">
                       <MessageCircle className="w-6 h-6 text-white" />
                     </div>

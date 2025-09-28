@@ -216,26 +216,47 @@ export default function PricingPage() {
           </motion.div>
 
           <div className="overflow-x-auto">
-            <table className="w-full max-w-4xl mx-auto border-collapse">
-              <thead>
-                <tr className="border-b border-border">
-                  <th className="text-left py-4 px-6 font-medium text-muted-foreground">Features</th>
-                  <th className="text-center py-4 px-6 font-medium text-muted-foreground">Starter</th>
-                  <th className="text-center py-4 px-6 font-medium text-muted-foreground">Pro</th>
-                  <th className="text-center py-4 px-6 font-medium text-muted-foreground">Enterprise</th>
-                </tr>
-              </thead>
-              <tbody>
-                {comparisonFeatures.map((feature, index) => (
-                  <tr key={index} className="border-b border-border/50 hover:bg-card/30">
-                    <td className="py-4 px-6 font-medium text-foreground">{feature.feature}</td>
-                    <td className="py-4 px-6 text-center">{renderFeatureValue(feature.starter)}</td>
-                    <td className="py-4 px-6 text-center">{renderFeatureValue(feature.pro)}</td>
-                    <td className="py-4 px-6 text-center">{renderFeatureValue(feature.enterprise)}</td>
+            <div className="w-full max-w-5xl mx-auto bg-card/30 rounded-2xl border border-blue-500/30 shadow-lg shadow-blue-500/10">
+              <table className="w-full border-collapse">
+                <thead>
+                  <tr className="border-b-2 border-blue-500/50 bg-gradient-to-r from-blue-500/5 to-blue-600/5">
+                    <th className="text-left py-6 px-8 font-bold text-foreground text-lg border-r border-blue-500/20">Features</th>
+                    <th className="text-center py-6 px-8 font-bold text-foreground text-lg border-r border-blue-500/20">Starter</th>
+                    <th className="text-center py-6 px-8 font-bold text-foreground text-lg border-r border-blue-500/20 bg-blue-500/10 relative">
+                      <div className="absolute inset-0 bg-gradient-to-r from-blue-500/10 to-blue-600/10 animate-pulse"></div>
+                      <span className="relative z-10">Pro</span>
+                      <div className="absolute -top-2 left-1/2 transform -translate-x-1/2">
+                        <span className="bg-blue-500 text-white text-xs px-2 py-1 rounded-full">Popular</span>
+                      </div>
+                    </th>
+                    <th className="text-center py-6 px-8 font-bold text-foreground text-lg">Enterprise</th>
                   </tr>
-                ))}
-              </tbody>
-            </table>
+                </thead>
+                <tbody>
+                  {comparisonFeatures.map((feature, index) => (
+                    <tr key={index} className="border-b border-blue-500/20 hover:bg-blue-500/5 transition-all duration-300 group">
+                      <td className="py-5 px-8 font-semibold text-foreground border-r border-blue-500/20 group-hover:text-blue-400 transition-colors">{feature.feature}</td>
+                      <td className="py-5 px-8 text-center border-r border-blue-500/20">
+                        <div className="flex justify-center items-center min-h-[2rem]">
+                          {renderFeatureValue(feature.starter)}
+                        </div>
+                      </td>
+                      <td className="py-5 px-8 text-center border-r border-blue-500/20 bg-blue-500/5 relative">
+                        <div className="absolute inset-0 bg-gradient-to-r from-blue-500/5 to-blue-600/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                        <div className="relative z-10 flex justify-center items-center min-h-[2rem]">
+                          {renderFeatureValue(feature.pro)}
+                        </div>
+                      </td>
+                      <td className="py-5 px-8 text-center">
+                        <div className="flex justify-center items-center min-h-[2rem]">
+                          {renderFeatureValue(feature.enterprise)}
+                        </div>
+                      </td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
           </div>
         </div>
       </section>
